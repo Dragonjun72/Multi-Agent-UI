@@ -44,7 +44,7 @@ jobs:
 
     steps:
       - name: GHCR Login
-        run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ secrets.REPO_USER }} --password-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
+        run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ secrets.REPO_USER }} --password-stdin
     
       - name: Pull latest image
         run: docker pull ghcr.io/${{ secrets.REPO_USER }}/multi-agent-ui:latest
